@@ -227,6 +227,8 @@ class Line(object):
         # --------------------------------------------------------------
         p1 = Point(start.x, start.y)
         p2 = Point(end.x, end.y)
+        self.originalstart = start
+        self.originalend = end
         self.start = p1
         self.end = p2
         self.number_of_clone = 0
@@ -718,6 +720,8 @@ class Line(object):
         #        The tests are already written (below).
         #        They include the Example in the above doc-string.
         # --------------------------------------------------------------
+        self.start = self.originalstart
+        self.end = self.originalend
 
 
 ########################################################################
